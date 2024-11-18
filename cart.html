@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="home.html">Stationery Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Cart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="text-center">Shopping Cart</h2>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </tbody>
+                </table>
+                <div class="text-right">
+                    <h4 id="cart-total">Total: $0.00</h4>
+                    <button class="btn btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div>
+     <center>
+
+
+        
+            <img src="yaven.png"  alt="Pens">
+            
+                <h5 class="card-title"> Stationery Yaven</h5>
+              
+          
+
+
+
+        <main>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="28943bad-1526-46df-b11f-da177ce60bba">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="region">Region</label>
+         <input type="text" id="region" name="region"  required> <br><br>
+         <label for="destination">Closest Destination of Goods</label> 
+            <input type="text" id="destination" name="destination"  required><br><br> 
+
+        <label for="paymentMethod">Payment Method</label> 
+        <select id="paymentMethod" name="paymentMethod" required>
+              
+              <option value="mobile_money">Mobile Money</option>
+               <option value="paypal">PayPal</option>
+                <option value="bank">Bank</option> 
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</main>
+</center>
+</div>
+
+        </body>
+</html>
