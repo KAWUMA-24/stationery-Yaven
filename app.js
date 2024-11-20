@@ -51,3 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+ function loadCart() { let cart = JSON.parse(localStorage.getItem('cart')) || []; let cartItemsContainer = document.getElementById('cart-items'); let totalCost = 0; cart.forEach(item => { let row = document.createElement('tr'); let nameCell = document.createElement('td'); let priceCell = document.createElement('td'); nameCell.textContent = item.name; priceCell.textContent = '$' + item.price.toFixed(2); row.appendChild(nameCell); row.appendChild(priceCell); cartItemsContainer.appendChild(row); totalCost += item.price; }); document.getElementById('total-cost').textContent = totalCost.toFixed(2); } window.onload = loadCart;
+
+
+function resetCart() { localStorage.removeItem('cart'); document.getElementById('cart-items').innerHTML = ''; document.getElementById('total-cost').textContent = '0.00'; alert('Cart has been reset!'); } document.getElementById('reset-cart').addEventListener('click', resetCart);
+
+
+
+ function addToCart(name, price)
+{ let cart = JSON.parse(localStorage.getItem('cart')) || []; cart.push({ name, price }); localStorage.setItem('cart', JSON.stringify(cart)); document.getElementById('Item added to cart!'); } 
