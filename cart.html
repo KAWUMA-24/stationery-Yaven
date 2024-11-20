@@ -35,27 +35,25 @@
         <h2 class="text-center">Shopping Cart</h2>
         <div class="row mt-4">
             <div class="col-md-12">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="cart-items">
-                        <!-- Cart items will be dynamically added here -->
-                    </tbody>
-                </table>
-                <div class="text-right">
-                    <h4 id="cart-total">Total: $0.00</h4>
-                    <button class="btn btn-primary">Checkout</button>
-                </div>
+                
+                
             </div>
         </div>
     </div>
+
+
+    
+
+    <div class="container mt-5"> <h1>Shopping Cart</h1> <table class="table table-bordered"> <thead> <tr> <th>Item</th> <th>Price</th> </tr> </thead> 
+        <tbody id="cart-items"> <!-- Cart items will be dynamically inserted here --> </tbody> </table> <h4>Total: $<span id="total-cost">0.00</span></h4>
+        <button class="btn btn-danger" id="reset-cart">Reset Cart</button>
+
+
+
+
+
+
+
     <br><br><br>
     <div>
      <center>
@@ -64,7 +62,7 @@
         
             <img src="yaven.png"  alt="Pens">
             
-                <h5 class="card-title"> Stationery Haven</h5>
+                <h5 class="card-title"> Stationery Yaven</h5>
               
           
 
@@ -78,6 +76,9 @@
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
+
+        <label for="email">Tel:</label>
+        <input type="integer" id="Tel" name="Tel" required><br><br>
 
         <label for="region">Region</label>
          <input type="text" id="region" name="region"  required> <br><br>
@@ -99,4 +100,9 @@
 </div>
 
         </body>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
 </html>
